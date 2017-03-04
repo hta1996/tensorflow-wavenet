@@ -60,7 +60,6 @@ def load_generic_audio(directory, sample_rate):
         audio = audio.reshape(-1, 1)
         yield audio, filename, category_id
 
-
 def trim_silence(audio, threshold):
     '''Removes silence at the beginning and end of a sample.'''
     energy = librosa.feature.rmse(audio, frame_length = 1024)
